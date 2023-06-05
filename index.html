@@ -13,9 +13,9 @@
         }
         
         body {
-            background-color: #06080A;
+            background: linear-gradient(45deg, #06080A, #0F0C1E, #0F0C1E, #06080A);
             color: #F5F5F5;
-            font-family: Arial, sans-serif;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
             line-height: 1.5;
             padding: 20px;
             display: flex;
@@ -72,11 +72,13 @@
             padding: 10px 20px;
             border-radius: 4px;
             text-decoration: none;
-            transition: background-color 0.3s ease;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
         
         .section-content .cta-button:hover {
             background-color: #FFD9A5;
+            transform: translateY(-2px);
         }
         
         .project-section .project-list {
@@ -117,8 +119,8 @@
     </style>
 </head>
 <body>
-    <h1>Mansa Dev Portfolio</h1>
-    <h2>Welcome to my developer portfolio.</h2>
+    <h1>Welcome to Victory Road</h1>
+    <h2>The Eternal Mind Welcomes You</h2>
     
     <div class="blog-section">
         <h3 class="section-title">Blog</h3>
