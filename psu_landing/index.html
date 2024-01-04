@@ -18,6 +18,7 @@
             <ul class="flex space-x-4">
                 <li><a href="#services" class="text-white">Services</a></li>
                 <li><a href="#contact" class="text-white">Contact</a></li>
+                <li><a href="#projects" class="text-white">Projects</a></li>
             </ul>
         </div>
     </nav>
@@ -26,7 +27,7 @@
     <section class="bg-gradient-to-r from-blue-500 to-blue-700 text-white h-screen flex flex-col justify-center items-center">
         <div class="container mx-auto text-center">
             <h1 class="text-4xl md:text-6xl font-extrabold mb-4">Your Success Starts Here</h1>
-            <p class="text-lg md:text-xl mb-8">We are Nonstandard Digital, a results-driven marketing agency that helps businesses grow.</p>
+            <p class="text-lg md:text-xl mb-8">We are Nonstandard Digital, a results-driven marketing and software agency that helps businesses grow.</p>
             <a href="#contact" class="bg-white text-blue-500 py-2 px-6 rounded-full text-lg md:text-xl hover:bg-blue-200 transition duration-300">Get Started</a>
         </div>
     </section>
@@ -79,11 +80,112 @@
         </div>
     </section>
 
+    <!-- Projects Section -->
+    <section id="projects" class="bg-gray-100 py-16">
+        <div class="container mx-auto text-center">
+            <h2 class="text-2xl md:text-4xl font-extrabold mb-8">Our Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Project Card 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <img src="https://via.placeholder.com/300" alt="Project 1" class="mx-auto mb-4 rounded-md">
+                    <h3 class="text-xl font-semibold mb-4">Project 1</h3>
+                    <p class="text-gray-700">Description of Project 1.</p>
+                </div>
+                <!-- Project Card 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <img src="https://via.placeholder.com/300" alt="Project 2" class="mx-auto mb-4 rounded-md">
+                    <h3 class="text-xl font-semibold mb-4">Project 2</h3>
+                    <p class="text-gray-700">Description of Project 2.</p>
+                </div>
+                <!-- Project Card 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <img src="https://via.placeholder.com/300" alt="Project 3" class="mx-auto mb-4 rounded-md">
+                    <h3 class="text-xl font-semibold mb-4">Project 3</h3>
+                    <p class="text-gray-700">Description of Project 3.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="bg-gray-800 text-white text-center py-4">
         <p>&copy; 2024 Nonstandard Digital. All rights reserved.</p>
     </footer>
 
+    <!-- Modal Section -->
+    <div id="myModal" class="modal hidden fixed top-0 left-0 w-full h-full
+
+ bg-gray-800 bg-opacity-50 flex justify-center items-center">
+        <div class="bg-white p-8 rounded-lg">
+            <h2 class="text-2xl font-extrabold mb-4">Contact Us</h2>
+            <form id="contactForm" action="#" method="post">
+                <!-- Name Field -->
+                <div class="mb-4">
+                    <label for="modalName" class="block text-sm font-medium text-gray-600">Name</label>
+                    <input type="text" id="modalName" name="name" class="mt-1 p-2 w-full border rounded-md">
+                </div>
+                <!-- Email Field -->
+                <div class="mb-4">
+                    <label for="modalEmail" class="block text-sm font-medium text-gray-600">Email</label>
+                    <input type="email" id="modalEmail" name="email" class="mt-1 p-2 w-full border rounded-md">
+                </div>
+                <!-- Message Field -->
+                <div class="mb-4">
+                    <label for="modalMessage" class="block text-sm font-medium text-gray-600">Message</label>
+                    <textarea id="modalMessage" name="message" rows="4" class="mt-1 p-2 w-full border rounded-md"></textarea>
+                </div>
+                <!-- Submit Button -->
+                <button type="submit" class="bg-blue-500 text-white py-2 px-6 rounded-full text-lg hover:bg-blue-700 transition duration-300">Submit</button>
+            </form>
+            <button id="closeModal" class="mt-4 text-gray-500 hover:text-gray-700">Close</button>
+        </div>
+    </div>
+
+    <!-- JavaScript Section -->
+    <script>
+        // JavaScript to toggle modal visibility
+        const modal = document.getElementById('myModal');
+        const openModalButton = document.querySelector('.bg-blue-500'); // Assuming this is the "Contact Now" link
+        const closeModalButton = document.getElementById('closeModal');
+
+        openModalButton.addEventListener('click', () => {
+            modal.classList.remove('hidden');
+        });
+
+        closeModalButton.addEventListener('click', () => {
+            modal.classList.add('hidden');
+        });
+
+        // JavaScript to handle form submission
+        const contactForm = document.getElementById('contactForm');
+
+        contactForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // Add logic to send form data to your server or use a service
+            // Example using Formspree:
+            const formAction = 'https://formspree.io/your-email@example.com'; // Replace with your email
+            const formData = new FormData(contactForm);
+
+            fetch(formAction, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json',
+                },
+            }).then(response => {
+                // Handle the response here (e.g., show a thank you message)
+                console.log(response);
+                modal.classList.add('hidden');
+            }).catch(error => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
+
 </body>
 
 </html>
+```
+
+This code includes the full HTML structure with the modal form handling and the associated JavaScript code.
