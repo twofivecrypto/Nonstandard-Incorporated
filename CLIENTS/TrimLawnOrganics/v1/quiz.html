@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Organic Lawn Care Quiz</title>
+    <style>
+        @keyframes buttonAnimation {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .animated-button:hover {
+            animation: buttonAnimation 0.3s ease-in-out;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 font-sans font-bold">
+
+    <div class="container mx-auto my-8 text-center">
+        <h1 class="text-3xl font-bold mb-4">Organic Lawn Care Quiz</h1>
+        <p class="text-lg mb-8">Answer the following questions to get personalized lawn care recommendations.</p>
+
+        <!-- Question 1 -->
+        <div class="mb-4">
+            <p class="text-xl font-semibold mb-2">1. What is the size of your lawn?</p>
+            <!-- Options -->
+            <button class="bg-blue-500 text-white px-4 py-2 rounded-full animated-button">Small</button>
+            <button class="bg-blue-500 text-white px-4 py-2 rounded-full animated-button">Medium</button>
+            <button class="bg-blue-500 text-white px-4 py-2 rounded-full animated-button">Large</button>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="mb-4">
+            <p class="text-xl font-semibold mb-2">2. What type of grass do you have?</p>
+            <!-- Options -->
+            <button class="bg-blue-500 text-white px-4 py-2 rounded-full animated-button">Fescue</button>
+            <button class="bg-blue-500 text-white px-4 py-2 rounded-full animated-button">Bermuda</button>
+            <button class="bg-blue-500 text-white px-4 py-2 rounded-full animated-button">Other</button>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="mb-4">
+            <p class="text-xl font-semibold mb-2">3. How often do you water your lawn?</p>
+            <!-- Options -->
+            <button class="bg-blue-500 text-white px-4 py-2 rounded-full animated-button">Daily</button>
+            <button class="bg-blue-500 text-white px-4 py-2 rounded-full animated-button">Twice a week</button>
+            <button class="bg-blue-500 text-white px-4 py-2 rounded-full animated-button">Weekly</button>
+            <button class="bg-blue-500 text-white px-4 py-2 rounded-full animated-button">I Don't know</button>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="mb-4">
+            <p class="text-xl font-semibold mb-2">4. Have you used chemical pesticides on your lawn?</p>
+            <!-- Options -->
+            <button class="bg-blue-500 text-white px-4 py-2 rounded-full animated-button">Yes</button>
+            <button class="bg-blue-500 text-white px-4 py-2 rounded-full animated-button">No</button>
+            <button class="bg-blue-500 text-white px-4 py-2 rounded-full animated-button">I Don't know</button>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="mb-4">
+            <p class="text-xl font-semibold mb-2">5. Do you have pets or children playing on the lawn?</p>
+            <!-- Options -->
+            <button class="bg-blue-500 text-white px-4 py-2 rounded-full animated-button">Yes</button>
+            <button class="bg-blue-500 text-white px-4 py-2 rounded-full animated-button">No</button>
+            <button class="bg-blue-500 text-white px-4 py-2 rounded-full animated-button">I Don't know</button>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="mb-4">
+            <p class="text-xl font-semibold mb-2">6. Are there specific challenges or issues you are facing with your
+                lawn?</p>
+            <!-- Options -->
+            <button class="bg-blue-500 text-white px-4 py-2 rounded-full animated-button">Weeds</button>
+            <button class="bg-blue-500 text-white px-4 py-2 rounded-full animated-button">Brown patches</button>
+            <button class="bg-blue-500 text-white px-4 py-2 rounded-full animated-button">Pests</button>
+            <button class="bg-blue-500 text-white px-4 py-2 rounded-full animated-button">Other</button>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="mb-4">
+            <p class="text-xl font-semibold mb-2">7. How much time do you typically spend on lawn maintenance each week?
+            </p>
+            <!-- Options -->
+            <button class="bg-blue-500 text-white px-4 py-2 rounded-full animated-button">Less than 1 hour</button>
+            <button class="bg-blue-500 text-white px-4 py-2 rounded-full animated-button">1-2 hours</button>
+            <button class="bg-blue-500 text-white px-4 py-2 rounded-full animated-button">2-3 hours</button>
+            <button class="bg-blue-500 text-white px-4 py-2 rounded-full animated-button">More than 3 hours</button>
+        </div>
+
+        <!-- Question 8 -->
+        <div class="mb-4">
+            <p class="text-xl font-semibold mb-2">8. How would you describe the sunlight exposure in your lawn area?</p>
+            <!-- Options -->
+            <button class="bg-blue-500 text-white px-4 py-2 rounded-full animated-button">Full sun</button>
+            <button class="bg-blue-500 text-white px-4 py-2 rounded-full animated-button">Partial shade</button>
+            <button class="bg-blue-500 text-white px-4 py-2 rounded-full animated-button">Full shade</button>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="mb-4 mx-auto text-center">
+            <p class="text-xl font-semibold mb-2">Contact Information</p>
+            <div class="flex flex-col md:flex-row gap-4">
+                <input type="text" placeholder="Name" class="border rounded-full p-2 w-1/2 md:w-1/3">
+                <input type="email" placeholder="Email" class="border rounded-full p-2 w-1/2 md:w-1/3">
+                <input type="tel" placeholder="Phone Number" class="border rounded-full p-2 w-1/2 md:w-1/3">
+            </div>
+        </div>
+
+        <!-- Consent -->
+        <div class="mb-4 mx-auto text-center">
+            <p class="text-xl font-semibold mb-2">Can we contact you via email or text to further discuss personalized
+                recommendations?</p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <label class="flex items-center gap-2 cursor-pointer">
+                    <input type="checkbox" class="hidden form-checkbox">
+                    <div
+                        class="bg-blue-500 text-white px-4 py-2 rounded-full animated-button transition-all duration-300 hover:bg-blue-600">
+                        Email
+                    </div>
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer">
+                    <input type="checkbox" class="hidden form-checkbox">
+                    <div
+                        class="bg-blue-500 text-white px-4 py-2 rounded-full animated-button transition-all duration-300 hover:bg-blue-600">
+                        Text
+                    </div>
+                </label>
+            </div>
+        </div>
+
+
+
+
+        <!-- Submit Button -->
+        <button class="bg-green-500 text-white px-6 py-3 rounded-full animated-button mt-8">Get Recommendations</button>
+    </div>
+
+    <footer class="bg-gray-800 text-white p-4 text-center mt-auto">
+        <p>&copy; 2024 Your Company. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
